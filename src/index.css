@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Freight-bold";
+    src: url('./font/FreightTextProBold-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Freight-medium";
+    src: url('./font/FreightTextProMedium-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Freight-light";
+    src: url('./font/FreightTextProLight-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Freight-semibold";
+    src: url('./font/FreightTextProSemibold-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Freight-book";
+    src: url('./font/FreightTextProBook-Regular.ttf');
+}
