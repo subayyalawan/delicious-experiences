@@ -1,38 +1,22 @@
-import React from "react";
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import React, { useState } from "react";
+import BlogLower from "./BlogLower";
+import BlogUpper from "./BlogUpper";
+import Newsletter from "./Newsletter";
 
-AOS.init({
-  offset: 150,
-  delay: 50,
-  duration: 500,
-  once: true,
-});
-
-
-const blogCard = (props) => {
+function BlogCard() {
+  const [query, setQuery] = useState("");
+  const [filterArray1, setFilterArray1] = useState([])
+  const [filterArray2, setFilterArray2] = useState([])
 
   return (
     <>
-      <div className="card lg:w-31_ sm:w-45_ w-11/12 text-center cursor-pointer" data-aos = "zoom-in">
-        <img
-          className="w-full min-h-380_ object-cover"
-          src={props.imgSrc}
-          alt="Blog"
-        />
-        <p className="text-xs uppercase font-semibold border-b-2 border-yellow-400 inline-block mt-4">
-          {props.category}
-        </p>
+      <BlogUpper query={query} filterArray1 = {filterArray1} setFilterArray1 = {setFilterArray1}/>
 
-        <h4 className="capitalize text-2xl hover:opacity-50 transition-all w-9/12 mx-auto font-Freight-bold mt-2">
-          {props.title}
-        </h4>
-        <p className="uppercase text-gray-500 font-semibold mt-3 text-xs">
-          {props.postDate}
-        </p>
-      </div>
+      <Newsletter query={query} setQuery={setQuery} />
+
+      <BlogLower query={query} filterArray2 = {filterArray2} setFilterArray2 = {setFilterArray2}/>
     </>
   );
 }
 
-export default blogCard;
+export default BlogCard;

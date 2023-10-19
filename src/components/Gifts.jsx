@@ -3,7 +3,7 @@ import React from "react";
 const Gifts = () => {
   return (
     <>
-      <div className="bg-blog-area perfect-gift 2xl:1/2 xl:w-3/4 md:container w-11/12 mx-auto text-center px-12 py-8 md:-mt-40 -mt-32 relative">
+      <div className="bg-blog-area perfect-gift 2xl:1/2 2xl:w-2/4  xl:w-3/4 md:container w-11/12 mx-auto text-center px-12 py-8 md:-mt-40 -mt-32 relative">
         <h4 className="uppercase text-base font-semibold border-b-2 border-yellow-400 inline-block cursor-pointer">
           Prfect Gifts
         </h4>

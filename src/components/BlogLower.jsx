@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { array2 } from "./ArrayData";
-import BlogCard from "./BlogCard";
+import Card from "./Card";
 // import CardFilter from "./CardFilter";
 
 const BlogLower = ({ query, filterArray2, setFilterArray2 }) => {
@@ -20,7 +20,7 @@ const BlogLower = ({ query, filterArray2, setFilterArray2 }) => {
       <div className="container bg-gray-100 lowerBlogs mx-auto flex sm:justify-between justify-center flex-wrap flex-col sm:flex-row pt-8 px-2 sm:items-start items-center">
         {filterArray2.map((val) => {
           return (
-            <BlogCard
+            <Card
               imgSrc={val.imgSrc}
               category={val.category}
               title={val.title}
