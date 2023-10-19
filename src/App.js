@@ -6,7 +6,7 @@ import Gifts from "./components/Gifts";
 import BlogNav from "./components/BlogNav";
 import Footer from "./components/Footer";
 import BlogCard from "./components/BlogCard";
-import MobileNav from "./components/MobileNav";
+import MobileNav from "./components/MobileNavigation";
 
 function App() {
 

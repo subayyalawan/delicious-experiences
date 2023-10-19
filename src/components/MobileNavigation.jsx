@@ -146,12 +146,16 @@ const MobileNav = () => {
             <li className="mb-4 font-Freight-medium text-3xl">Contact us</li>
           </ul>
           <div className="delicious-badge w-full sm:hidden block absolute bottom-0">
-            <img src={deliciousBadge} alt="Delicious Badge" className="w-full"/>
+            <img
+              src={deliciousBadge}
+              alt="Delicious Badge"
+              className="w-full"
+            />
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default MobileNav;
