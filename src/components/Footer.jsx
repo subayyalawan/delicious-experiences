@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function Footer() {
+const Footer = () => {
   return (
     <>
       <div className="footer bg-white">
@@ -39,8 +39,18 @@ function Footer() {
                 ></path>
               </g>
             </svg>
+            <div className="mobile-social-link md:hidden block my-6">
+              <FontAwesomeIcon
+                className="hover:text-blue-700 transition-all mr-3 cursor-pointer"
+                icon={faFacebookF}
+              />
+              <FontAwesomeIcon
+                className="hover:text-blue-700 transition-all mr-3 cursor-pointer"
+                icon={faInstagram}
+              />
+            </div>
           </div>
-          <div className="footer-content flex justify-between text-footer-text-grey flex-col md:flex-row">
+          <div className="footer-content flex justify-between text-footer-text-grey flex-col sm:flex-row">
             <div className="footer-details md:w-1/4 w-full md:block hidden">
               <p className="text-xs mb-6">
                 Delicious Experiences helps companies{" "}
@@ -62,16 +72,7 @@ function Footer() {
               </p>
             </div>
 
-            <div className="mobile-social-link md:hidden block mb-6">
-              <FontAwesomeIcon
-                className="hover:text-blue-700 transition-all mr-3 cursor-pointer"
-                icon={faFacebookF}
-              />
-              <FontAwesomeIcon
-                className="hover:text-blue-700 transition-all mr-3 cursor-pointer"
-                icon={faInstagram}
-              />
-            </div>
+            
 
             <div className="footer-nav md:w-1/12 w-full">
               <ul className="list-none font-Freight-book">
@@ -101,7 +102,7 @@ function Footer() {
                 />
               </div>
 
-              <p className="text-xs mt-6 block md:hidden">
+              <p className="text-xs sm:mt-0 mt-6 block md:hidden">
                 &copy; Delicious Experiences 2023
               </p>
 

@@ -3,7 +3,7 @@ import { array2 } from "./ArrayData";
 import BlogCard from "./BlogCard";
 // import CardFilter from "./CardFilter";
 
-function BlogLower({ query, filterArray2, setFilterArray2 }) {
+const BlogLower = ({ query, filterArray2, setFilterArray2 }) => {
   useEffect(() => {
     if (query.length > 0) {
       const outputCards = array2.filter((item) => {
@@ -17,7 +17,7 @@ function BlogLower({ query, filterArray2, setFilterArray2 }) {
 
   return (
     <>
-      <div className="container bg-gray-100 lowerBlogs mx-auto flex md:justify-between justify-center flex-col md:flex-row pt-8 px-2 md:items-start items-center">
+      <div className="container bg-gray-100 lowerBlogs mx-auto flex sm:justify-between justify-center flex-wrap flex-col sm:flex-row pt-8 px-2 sm:items-start items-center">
         {filterArray2.map((val) => {
           return (
             <BlogCard

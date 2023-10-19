@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 
-function Navigation() {
+const Navigation = () => {
   const [activePageIndex] = useState(0);
   const blogNav = [1, 2, 3, 4, 5, 6, 7];
 

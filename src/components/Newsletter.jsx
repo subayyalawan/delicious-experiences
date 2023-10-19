@@ -1,6 +1,6 @@
 import React from "react";
 
-function Newsletter({query,setQuery}) {
+const Newsletter = ({query,setQuery}) => {
 
   return (
     <>

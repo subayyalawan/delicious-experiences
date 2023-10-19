@@ -6,14 +6,15 @@ AOS.init({
   offset: 150,
   delay: 50,
   duration: 500,
+  once: true,
 });
 
 
-function blogCard(props) {
+const blogCard = (props) => {
 
   return (
     <>
-      <div className="card md:w-31_ w-11/12 text-center cursor-pointer" data-aos = "zoom-in">
+      <div className="card lg:w-31_ sm:w-45_ w-11/12 text-center cursor-pointer" data-aos = "zoom-in">
         <img
           className="w-full min-h-380_ object-cover"
           src={props.imgSrc}

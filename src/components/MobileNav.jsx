@@ -3,28 +3,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import headerBG from "../images/header-img.png";
 import navInnerbg from "../images/navInnerBG.jpeg";
+import deliciousBadge from "../images/delicious-badge-half.png";
 
-function MobileNav() {
+const MobileNav = () => {
   const [color, setColor] = useState(false);
-  const [mobileNavOpen, setMobileNavOpen] = useState(false)
-  const [navVisible, setNavVisible] = useState(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [navVisible, setNavVisible] = useState(false);
 
-  const toggleNavClose = () =>{
-    setNavVisible (!navVisible)
-    
+  const toggleNavClose = () => {
+    setNavVisible(!navVisible);
+
     setTimeout(() => {
-      setMobileNavOpen(open => !open)
+      setMobileNavOpen((open) => !open);
     }, 350);
-  }
+  };
 
-  const toggleNavOpen = () =>{
-    setMobileNavOpen(open => !open)
-    
+  const toggleNavOpen = () => {
+    setMobileNavOpen((open) => !open);
+
     setTimeout(() => {
-      setNavVisible (!navVisible)
+      setNavVisible(!navVisible);
     }, 5);
-  }
-
+  };
 
   const stickyNav = () => {
     if (window.scrollY > 420) {
@@ -83,12 +83,14 @@ function MobileNav() {
           </a>
 
           <div className="bg-white h-12 w-12 text-base rounded-full flex justify-center items-center">
-            <FontAwesomeIcon icon={faBars} onClick={toggleNavOpen}/>
+            <FontAwesomeIcon icon={faBars} onClick={toggleNavOpen} />
           </div>
         </div>
 
         <div
-          className={`${navVisible? 'opacity-100' : 'opacity-0'} ${mobileNavOpen? "block isOpen": "hidden"} bg-mobile-nav transition-opacity duration-500 navInner h-screen inset-x-0 z-20 fixed top-0 bg-40%_ bg-no-repeat bg-right py-4 px-3`}
+          className={`${navVisible ? "opacity-100" : "opacity-0"} ${
+            mobileNavOpen ? "block isOpen" : "hidden"
+          } bg-mobile-nav transition-opacity duration-500 navInner h-screen inset-x-0 z-20 fixed top-0 bg-40%_ bg-no-repeat bg-right py-4 px-3`}
           style={{ backgroundImage: `url(${navInnerbg})` }}
         >
           <div
@@ -130,17 +132,22 @@ function MobileNav() {
             </a>
 
             <div className="bg-white text-footer-text-grey h-12 w-12 text-base rounded-full flex justify-center items-center">
-              <FontAwesomeIcon icon={faXmark} onClick={toggleNavClose}/>
+              <FontAwesomeIcon icon={faXmark} onClick={toggleNavClose} />
             </div>
           </div>
 
           <ul className="mt-16 text-footer-text-grey">
             <li className="mb-4 font-Freight-medium text-3xl">Home</li>
-            <li className="mb-4 font-Freight-medium text-3xl">Corporate Events</li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              Corporate Events
+            </li>
             <li className="mb-4 font-Freight-medium text-3xl">Gifts</li>
             <li className="mb-4 font-Freight-medium text-3xl">FAQ</li>
             <li className="mb-4 font-Freight-medium text-3xl">Contact us</li>
           </ul>
+          <div className="delicious-badge w-full sm:hidden block mt-14">
+            <img src={deliciousBadge} alt="Delicious Badge" className="w-full"/>
+          </div>
         </div>
       </div>
     </>

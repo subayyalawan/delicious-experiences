@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import background from "../images/header-img.png";
 
 
-function Header() {
+const Header = () => {
   const [colorChange, setColorChange] = useState(false);
 
   const stickyNav = () => {
@@ -66,7 +66,7 @@ function Header() {
             <ul
               className={`${
                 colorChange ? "text-black" : "text-white"
-              } main-nav list-none flex justify-between font-semibold w-1/4 uppercase text-sm transition-all`}
+              } main-nav list-none flex justify-between font-semibold xl:w-1/4 md:w-2/5 uppercase text-sm transition-all`}
             >
               <li
                 className={`${

@@ -1,15 +1,15 @@
 import React from "react";
 
-function Gifts() {
+const Gifts = () => {
   return (
     <>
-      <div className="bg-blog-area perfect-gift md:w-1/2 w-11/12 mx-auto text-center px-12 py-8 md:-mt-40 -mt-32 relative">
+      <div className="bg-blog-area perfect-gift 2xl:1/2 xl:w-3/4 md:container w-11/12 mx-auto text-center px-12 py-8 md:-mt-40 -mt-32 relative">
         <h4 className="uppercase text-base font-semibold border-b-2 border-yellow-400 inline-block cursor-pointer">
           Prfect Gifts
         </h4>
 
         <a href="/">
-          <h3 className="capitalize text-xl md:text-5xl hover:opacity-50 transition-all cursor-pointer leading-normal">
+          <h3 className="capitalize text-xl md:text-3xl xl:text-5xl hover:opacity-50 transition-all cursor-pointer leading-normal">
             Sending Out Holiday gifts For Clients: 5 Unique ways to show your
             appreciation.
           </h3>
