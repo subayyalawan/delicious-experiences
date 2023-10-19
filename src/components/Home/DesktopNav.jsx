@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import background from "../images/header-img.png";
+import background from "../../images/header-img.png";
 
 
 const Header = () => {

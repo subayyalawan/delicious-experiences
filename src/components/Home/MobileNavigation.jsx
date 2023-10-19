@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import headerBG from "../images/header-img.png";
-import navInnerbg from "../images/navInnerBG.jpeg";
-import deliciousBadge from "../images/delicious-badge-half.png";
+import headerBG from "../../images/header-img.png";
+import navInnerbg from "../../images/navInnerBG.jpeg";
+import deliciousBadge from "../../images/delicious-badge-half.png";
 
 const MobileNav = () => {
   const [color, setColor] = useState(false);
