@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Gift from "./pages/Gift";
 import Layout from "./components/Layout";
 import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gift" element={<Gift/>} />
           <Route path="/blog" element={<Blog/>}/>
+          <Route path="/contact" element={<Contact />}/>
         </Routes>
       </Layout>
     </BrowserRouter>

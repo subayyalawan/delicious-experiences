@@ -4,7 +4,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import headerBG from "../../images/header-img.png";
 import navInnerbg from "../../images/navInnerBG.jpeg";
 import deliciousBadge from "../../images/delicious-badge-half.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const MobileNav = () => {
   const [color, setColor] = useState(false);
@@ -137,28 +137,70 @@ const MobileNav = () => {
             </div>
           </div>
 
-          <ul className="mt-16 text-footer-text-grey">
-            <li className="mb-4 font-Freight-medium text-3xl">
-              <Link to="/">Home</Link>
+          <ul className="mt-16 relative z-10">
+            <li className="mb-4">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-orange-700" : "text-footer-text-grey"
+                  } font-Freight-medium text-3xl`
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="mb-4">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-orange-700" : "text-footer-text-grey"
+                  } font-Freight-medium text-3xl`
+                }
+              >
+                Corporate Events
+              </NavLink>
+            </li>
+            <li className="mb-4 ">
+              <NavLink
+                to="/Gift"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-orange-700" : "text-footer-text-grey"
+                  } font-Freight-medium text-3xl`
+                }
+              >
+                Gifts
+              </NavLink>
+            </li>
+            <li className="mb-4 ">
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-orange-700" : "text-footer-text-grey"
+                  } font-Freight-medium text-3xl`
+                }
+              >
+                FAQ
+              </NavLink>
             </li>
             <li className="mb-4 font-Freight-medium text-3xl">
-              <Link to="/">Corporate Events</Link>
-            </li>
-            <li className="mb-4 font-Freight-medium text-3xl">
-              <Link to="Gift">Gifts</Link>
-            </li>
-            <li className="mb-4 font-Freight-medium text-3xl">
-              <Link to="/blog">FAQ</Link>
-            </li>
-            <li className="mb-4 font-Freight-medium text-3xl">
-              <Link to="/">Contact us</Link>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => `
+                ${isActive ? "text-orange-700" : "text-footer-text-grey"}`}
+              >
+                Contact us
+              </NavLink>
             </li>
           </ul>
           <div className="delicious-badge w-full sm:hidden block absolute bottom-0">
             <img
               src={deliciousBadge}
               alt="Delicious Badge"
-              className="w-full"
+              className="w-full pointer-events-none"
             />
           </div>
         </div>

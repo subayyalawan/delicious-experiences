@@ -69,32 +69,83 @@ const Header = () => {
               } main-nav list-none flex justify-between font-semibold xl:w-1/4 md:w-2/5 uppercase text-sm transition-all`}
             >
               <li
-                className={`${
-                  colorChange ? "hover:border-b-black" : "hover:border-b-white"
-                } cursor-pointer inline-block border-b border-transparent transition-all`}
+                className={`cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                <Link to="/">Corporate Events</Link>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? colorChange
+                          ? "border-b-black hover:border-b-black"
+                          : "border-b-white hover:border-b-white"
+                        : colorChange
+                        ? " hover:border-b-black"
+                        : " hover:border-b-white"
+                    } border-b border-transparent transition-all duration-150`
+                  }
+                >
+                  Corporate Events
+                </NavLink>
               </li>
               <li
-                className={`${
-                  colorChange ? "hover:border-b-black" : "hover:border-b-white"
-                } cursor-pointer inline-block border-b border-transparent transition-all`}
+                className={` cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                <Link to="/Gift">Gifts</Link>
+                <NavLink
+                  to="/gift"
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? colorChange
+                          ? "border-b-black hover:border-b-black"
+                          : "border-b-white hover:border-b-white"
+                        : colorChange
+                        ? " hover:border-b-black"
+                        : " hover:border-b-white"
+                    } border-b border-transparent transition-all duration-150`
+                  }
+                >
+                  Gifts
+                </NavLink>
               </li>
               <li
-                className={`${
-                  colorChange ? "hover:border-b-black" : "hover:border-b-white"
-                } cursor-pointer inline-block border-b border-transparent transition-all`}
+                className={` cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                <Link to="/blog">FAQ</Link>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? colorChange
+                          ? "border-b-black hover:border-b-black"
+                          : "border-b-white hover:border-b-white"
+                        : colorChange
+                        ? " hover:border-b-black"
+                        : " hover:border-b-white"
+                    } border-b border-transparent transition-all duration-150`
+                  }
+                >
+                  FAQ
+                </NavLink>
               </li>
+
               <li
-                className={`${
-                  colorChange ? "hover:border-b-black" : "hover:border-b-white"
-                } cursor-pointer inline-block border-b border-transparent transition-all`}
+                className={`cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                <Link to="/">Contact</Link>
+                <NavLink to="/contact"
+                  className={({isActive})=>`
+                    ${isActive
+                      ?colorChange
+                        ? "border-b-black hover:border-b-black"
+                        : "border-b-white hover:border-b-white"
+                      : colorChange
+                        ? "hover:border-b-black"
+                        : "hover:border-b-white"
+                    } border-b border-transparent transition-all duration-150
+                   ` }
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
