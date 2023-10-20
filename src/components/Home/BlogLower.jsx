@@ -18,9 +18,10 @@ const BlogLower = ({ query, filterArray2, setFilterArray2 }) => {
   return (
     <>
       <div className="container bg-gray-100 lowerBlogs mx-auto flex sm:justify-between justify-center flex-wrap flex-col sm:flex-row pt-8 px-2 sm:items-start items-center">
-        {filterArray2.map((val) => {
+        {filterArray2.map((val, index) => {
           return (
             <Card
+              key={index}
               imgSrc={val.imgSrc}
               category={val.category}
               title={val.title}
@@ -31,6 +32,6 @@ const BlogLower = ({ query, filterArray2, setFilterArray2 }) => {
       </div>
     </>
   );
-}
+};
 
 export default BlogLower;

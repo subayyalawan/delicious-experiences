@@ -4,6 +4,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import headerBG from "../../images/header-img.png";
 import navInnerbg from "../../images/navInnerBG.jpeg";
 import deliciousBadge from "../../images/delicious-badge-half.png";
+import { Link } from "react-router-dom";
 
 const MobileNav = () => {
   const [color, setColor] = useState(false);
@@ -137,13 +138,21 @@ const MobileNav = () => {
           </div>
 
           <ul className="mt-16 text-footer-text-grey">
-            <li className="mb-4 font-Freight-medium text-3xl">Home</li>
             <li className="mb-4 font-Freight-medium text-3xl">
-              Corporate Events
+              <Link to="/">Home</Link>
             </li>
-            <li className="mb-4 font-Freight-medium text-3xl">Gifts</li>
-            <li className="mb-4 font-Freight-medium text-3xl">FAQ</li>
-            <li className="mb-4 font-Freight-medium text-3xl">Contact us</li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              <Link to="/">Corporate Events</Link>
+            </li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              <Link to="Gift">Gifts</Link>
+            </li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              <Link to="/blog">FAQ</Link>
+            </li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              <Link to="/">Contact us</Link>
+            </li>
           </ul>
           <div className="delicious-badge w-full sm:hidden block absolute bottom-0">
             <img

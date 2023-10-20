@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import background from "../../images/header-img.png";
-
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [colorChange, setColorChange] = useState(false);
@@ -27,7 +27,7 @@ const Header = () => {
           } fixed top-0 inset-x-0 transition-all z-10`}
         >
           <div className="navigation flex justify-between items-center container mx-auto py-5 px-2">
-            <a href="/" className="cursor-pointer">
+            <Link to="/" className="cursor-pointer">
               <svg
                 className={`${
                   colorChange ? "text-black" : "text-white"
@@ -61,7 +61,7 @@ const Header = () => {
                   ></path>
                 </g>
               </svg>
-            </a>
+            </Link>
 
             <ul
               className={`${
@@ -73,28 +73,28 @@ const Header = () => {
                   colorChange ? "hover:border-b-black" : "hover:border-b-white"
                 } cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                Corporate Events
+                <Link to="/">Corporate Events</Link>
               </li>
               <li
                 className={`${
                   colorChange ? "hover:border-b-black" : "hover:border-b-white"
                 } cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                Gifts
+                <Link to="/Gift">Gifts</Link>
               </li>
               <li
                 className={`${
                   colorChange ? "hover:border-b-black" : "hover:border-b-white"
                 } cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                faq
+                <Link to="/blog">FAQ</Link>
               </li>
               <li
                 className={`${
                   colorChange ? "hover:border-b-black" : "hover:border-b-white"
                 } cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                Contact
+                <Link to="/">Contact</Link>
               </li>
             </ul>
           </div>
@@ -102,6 +102,6 @@ const Header = () => {
       </div>
     </>
   );
-}
+};
 
 export default Header;
