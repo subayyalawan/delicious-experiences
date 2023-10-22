@@ -40,16 +40,16 @@ function ToDoList() {
   return (
     <div className=" container mx-auto my-20">
       <div className="w-11/12 md:w-10/12 mx-auto">
-        <div className="flex justify-between items-center bg-contact-yellow md:p-8 p-4">
-          <div className="list-left">
+        <div className="flex justify-between md:flex-row flex-col items-center bg-contact-yellow md:p-8 p-4">
+          <div className="list-left w-full md:w-1/2 mb-1">
             <h1 className="font-Freight-bold text-2xl capitalize">Todo List</h1>
             <p className="font-Freight-medium text-sm">
               Enter New Item Into Your To-Do-List!
             </p>
           </div>
-          <div className="list-right bg-white w-1/2 flex justify-between items-center">
+          <div className="list-right bg-white md:w-1/2 w-full flex justify-between items-center rounded-lg py-1 pr-1">
             <input
-              className="bg-white w-9/12 py-3 px-2 font-Freight-bold focus:outline-none text-xs"
+              className="bg-white w-10/12 py-3 px-2 font-Freight-bold focus:outline-none text-xs"
               type="text"
               value={newItem}
               onChange={handleInputChange}
@@ -70,7 +70,6 @@ function ToDoList() {
             </p>
           )}
           <List
-            className=""
             title="Initial List"
             items={initialList}
             onCheckboxChange={handleCheckboxChange}
