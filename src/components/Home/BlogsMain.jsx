@@ -11,7 +11,6 @@ const BlogUpper = ({ query, filterArray, setFilterArray, array, Btn }) => {
     } else {
       setFilterArray(array);
     }
-    console.log("FilterArray", filterArray);
   });
 
   return (
@@ -28,7 +27,6 @@ const BlogUpper = ({ query, filterArray, setFilterArray, array, Btn }) => {
                 postDate={val.postDate}
                 Btn={Btn}
               />
-              
             </>
           );
         })}

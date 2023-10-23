@@ -13,7 +13,7 @@ const blogCard = (props) => {
   return (
     <>
       <div
-        className="card lg:w-31_ sm:w-45_ w-11/12 text-center cursor-pointer"
+        className="card lg:w-31_ sm:w-45_ w-11/12 text-center flex justify-center items-center flex-col min-h-[600px] py-4"
         data-aos="zoom-in"
       >
         <img
@@ -25,13 +25,14 @@ const blogCard = (props) => {
           {props.category}
         </p>
 
-        <h4 className="capitalize text-2xl hover:opacity-50 transition-all w-9/12 mx-auto font-Freight-bold mt-2">
+        <h4 className="capitalize text-2xl hover:opacity-50 cursor-pointer transition-all w-10/12 mx-auto font-Freight-bold mt-2 min-h-[110px]">
           {props.title}
         </h4>
         <p className="uppercase text-gray-500 font-semibold mt-3 text-xs">
           {props.postDate}
         </p>
-        <button className={props.Btn}>hhggf</button>
+        <button className={`${props.Btn} mt-4 text-white bg-red-600 cursor-pointer py-3 px-4 focus:outline-none text-xs rounded uppercase font-semibold`}
+        onClick={props.onDelete}>Delete</button>
       </div>
     </>
   );

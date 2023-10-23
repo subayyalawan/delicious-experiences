@@ -1,8 +1,12 @@
 import React from 'react'
+import BlogCrud from "../components/Blog/BlogCrud"
+import { array } from "../components/Home/ArrayData"
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <>
+      <BlogCrud Array={array} Btn={"block"}/>
+    </>
   )
 }
 
