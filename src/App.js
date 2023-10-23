@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
@@ -36,6 +36,10 @@ function App() {
   //       {
   //         path:"contact",
   //         element: <Contact />
+  //       },
+  //       {
+  //         path:"user/:id",
+  //         element: <User />
   //       }
   //     ],
   //   },
@@ -47,6 +51,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element= {<Layout />} >
+        <Route path = "" element={<Home />}/>
         <Route path = "gift" element={<Gift />}/>
         <Route path = "blog" element={<Blog />}/>
         <Route path = "contact" element={<Contact />}/>

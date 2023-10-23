@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BlogLower from "./BlogLower";
-import BlogUpper from "./BlogUpper";
+import BlogsMain from "./BlogsMain";
 import Newsletter from "./Newsletter";
+import {array} from '../Home/ArrayData';
 
 function BlogCard() {
   const [query, setQuery] = useState("");
@@ -10,11 +10,11 @@ function BlogCard() {
 
   return (
     <>
-      <BlogUpper query={query} filterArray1 = {filterArray1} setFilterArray1 = {setFilterArray1}/>
+      <BlogsMain query={query} filterArray = {filterArray1} setFilterArray = {setFilterArray1} array={array.slice(0,3)}/>
 
       <Newsletter query={query} setQuery={setQuery} />
 
-      <BlogLower query={query} filterArray2 = {filterArray2} setFilterArray2 = {setFilterArray2}/>
+      <BlogsMain query={query} filterArray = {filterArray2} setFilterArray = {setFilterArray2} array={array.slice(3,6)}/>
     </>
   );
 }

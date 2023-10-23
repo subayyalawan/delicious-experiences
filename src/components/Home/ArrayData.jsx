@@ -5,7 +5,7 @@ import card4 from "../../images/card4.png";
 import card5 from "../../images/card5.png";
 import card6 from "../../images/card6.png";
 
-export const array1 = [
+export const array = [
   {
     imgSrc: card1,
     category: "Seasonal Events",
@@ -26,9 +26,6 @@ export const array1 = [
       "women's Equality day 2022 and beyond: 5 ways to promote gender diversity in your workplace",
     postDate: "aug 22, 2022",
   },
-];
-
-export const array2 = [
   {
     imgSrc: card4,
     category: "b2b",
@@ -46,6 +43,6 @@ export const array2 = [
     category: "team building events",
     title: "5 unique ways to create team cohesion in a hybrid workplace",
     postDate: "jun 13, 2022",
-  },
-];
+  }
+]
 

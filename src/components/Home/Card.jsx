@@ -1,6 +1,6 @@
 import React from "react";
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 AOS.init({
   offset: 150,
@@ -9,12 +9,13 @@ AOS.init({
   once: true,
 });
 
-
 const blogCard = (props) => {
-
   return (
     <>
-      <div className="card lg:w-31_ sm:w-45_ w-11/12 text-center cursor-pointer" data-aos = "zoom-in">
+      <div
+        className="card lg:w-31_ sm:w-45_ w-11/12 text-center cursor-pointer"
+        data-aos="zoom-in"
+      >
         <img
           className="w-full min-h-380_ object-cover"
           src={props.imgSrc}
@@ -30,9 +31,10 @@ const blogCard = (props) => {
         <p className="uppercase text-gray-500 font-semibold mt-3 text-xs">
           {props.postDate}
         </p>
+        <button>hhggf</button>
       </div>
     </>
   );
-}
+};
 
 export default blogCard;
