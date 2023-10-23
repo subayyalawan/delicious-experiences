@@ -29,12 +29,17 @@ function ToDoList() {
     checkedItem.checked = !checkedItem.checked;
 
     if (checkedItem.checked) {
-      setFinalList([...finalList, checkedItem]);
-      setInitialList(updatedInitialList.filter((item) => !item.checked));
+      const itemIndex = finalList.findIndex(
+        (item) => item.text === checkedItem.text
+      );
+      if (itemIndex === -1) {
+        // Only add the item to the final list if it's not already there.
+        setFinalList([...finalList, { text: checkedItem.text, checked: true }]);
+      }
     } else {
-      setInitialList(updatedInitialList);
       setFinalList(finalList.filter((item) => item.text !== checkedItem.text));
     }
+    setInitialList(updatedInitialList);
   };
 
   return (

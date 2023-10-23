@@ -9,7 +9,7 @@ function List({ title, items, onCheckboxChange }) {
           <li key={index}>
             {onCheckboxChange && (
               <input
-                className="mr-2 accent-orange-700"
+                className="mr-2 accent-orange-600 focus:accent-orange-600"
                 type="checkbox"
                 checked={item.checked}
                 onChange={() => onCheckboxChange(index)}
