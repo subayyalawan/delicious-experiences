@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "./Card";
 
-const BlogUpper = ({ query, filterArray, setFilterArray, array }) => {
+const BlogUpper = ({ query, filterArray, setFilterArray, array, Btn }) => {
   useEffect(() => {
     if (query.length > 0) {
       const outputCards = array.filter((item) => {
@@ -26,6 +26,7 @@ const BlogUpper = ({ query, filterArray, setFilterArray, array }) => {
                 category={val.category}
                 title={val.title}
                 postDate={val.postDate}
+                Btn={Btn}
               />
               
             </>

@@ -31,7 +31,7 @@ const blogCard = (props) => {
         <p className="uppercase text-gray-500 font-semibold mt-3 text-xs">
           {props.postDate}
         </p>
-        <button>hhggf</button>
+        <button className={props.Btn}>hhggf</button>
       </div>
     </>
   );
