@@ -4,7 +4,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import headerBG from "../../images/header-img.png";
 import navInnerbg from "../../images/navInnerBG.jpeg";
 import deliciousBadge from "../../images/delicious-badge-half.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MobileNav = () => {
   const [color, setColor] = useState(false);
