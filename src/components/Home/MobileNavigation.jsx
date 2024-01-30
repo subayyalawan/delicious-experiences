@@ -150,18 +150,6 @@ const MobileNav = () => {
                 Home
               </NavLink>
             </li>
-            <li className="mb-4">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "text-orange-700" : "text-footer-text-grey"
-                  } font-Freight-medium text-3xl`
-                }
-              >
-                Corporate Events
-              </NavLink>
-            </li>
             <li className="mb-4 ">
               <NavLink
                 to="/Gift"
@@ -195,6 +183,16 @@ const MobileNav = () => {
                 Contact us
               </NavLink>
             </li>
+            <li className="mb-4 font-Freight-medium text-3xl">
+              <NavLink
+                to="/user/hello"
+                className={({ isActive }) => `
+                ${isActive ? "text-orange-700" : "text-footer-text-grey"}`}
+              >
+                Users
+              </NavLink>
+            </li>
+
           </ul>
           <div className="delicious-badge w-full sm:hidden block absolute bottom-0">
             <img

@@ -132,19 +132,42 @@ const Header = () => {
               <li
                 className={`cursor-pointer inline-block border-b border-transparent transition-all`}
               >
-                <NavLink to="/contact"
-                  className={({isActive})=>`
-                    ${isActive
-                      ?colorChange
-                        ? "border-b-black hover:border-b-black"
-                        : "border-b-white hover:border-b-white"
-                      : colorChange
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) => `
+                    ${
+                      isActive
+                        ? colorChange
+                          ? "border-b-black hover:border-b-black"
+                          : "border-b-white hover:border-b-white"
+                        : colorChange
                         ? "hover:border-b-black"
                         : "hover:border-b-white"
                     } border-b border-transparent transition-all duration-150
-                   ` }
+                   `}
                 >
                   Contact
+                </NavLink>
+              </li>
+
+              <li
+                className={`cursor-pointer inline-block border-b border-transparent transition-all`}
+              >
+                <NavLink
+                  to="/user/hello"
+                  className={({ isActive }) => `
+                    ${
+                      isActive
+                        ? colorChange
+                          ? "border-b-black hover:border-b-black"
+                          : "border-b-white hover:border-b-white"
+                        : colorChange
+                        ? "hover:border-b-black"
+                        : "hover:border-b-white"
+                    } border-b border-transparent transition-all duration-150
+                   `}
+                >
+                  Users
                 </NavLink>
               </li>
             </ul>
