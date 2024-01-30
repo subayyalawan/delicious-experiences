@@ -171,7 +171,7 @@ const MobileNav = () => {
                   } font-Freight-medium text-3xl`
                 }
               >
-                FAQ
+                FAQs
               </NavLink>
             </li>
             <li className="mb-4 font-Freight-medium text-3xl">
