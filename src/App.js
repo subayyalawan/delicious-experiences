@@ -55,7 +55,7 @@ function App() {
         <Route path = "gift" element={<Gift />}/>
         <Route path = "blog" element={<Blog />}/>
         <Route path = "contact" element={<Contact />}/>
-        <Route path = "user/:id" element={<User />}/>
+        <Route path = "user/:fname" element={<User />}/>
       </Route>
     )
   )
